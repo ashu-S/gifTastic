@@ -6,14 +6,10 @@
 
 $(document).ready(function(){
 
-
-
-// create an array of shows - in this case, awesome 90's tv shows
-
-
 var games = ["Super Mario", "8Bit", "Mortal Kombat", "Super Nintendo", "Game Boy", "Bioshock Infinite", "Call of Duty", "Kirby"];
 
 $("#gifsView").hide();
+
 // creates buttons for each of these
 function makeButtons(){ 
 	// deletes the shows prior to adding new shows so there are no repeat buttons

@@ -6,14 +6,10 @@
 
 $(document).ready(function(){
 
-
-
-// create an array of shows - in this case, awesome 90's tv shows
-
-
 var shows = ["Animes", "90's TV shows", "Cartoons", "Disney Movies", "Game Of thrones", "Walking Dead", "Orange is the new black", "Silicon valley"];
 
 $("#gifsView").hide();
+
 // creates buttons for each of these
 function makeButtons(){ 
 	// deletes the shows prior to adding new shows so there are no repeat buttons

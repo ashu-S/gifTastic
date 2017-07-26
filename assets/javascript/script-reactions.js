@@ -7,23 +7,8 @@
 $(document).ready(function(){
 
 
-
-// create an array of shows - in this case, awesome 90's tv shows
-
-
 var reactions = ["Happy", "Sad", "Irritated", "Angry", "joy", "I'm so excited","celebration","aw yeah"];
 
-
-// queryURLs for 1. Reactions
-// "https://api.giphy.com/v1/gifs/search?api_key=e048b303ed67412aa25bad4f4e52d48a&q=reactions&limit=&offset=0&rating=PG-13&lang=en"
-//2.Entertainment
-// "https://api.giphy.com/v1/gifs/search?api_key=d586148f66214e159b76f0a292b21b99&q=Entertainment&limit=&offset=0&rating=G&lang=en"
-// 3. Sports
-// "https://api.giphy.com/v1/gifs/search?api_key=ff376887686e4882b799d032421a5391&q=sports&limit=&offset=0&rating=G&lang=en"
-// 4. Artists
-// "https://api.giphy.com/v1/gifs/search?api_key=f8dc8a26189348a1a67974542ae3d7a2&q=artists&limit=&offset=0&rating=G&lang=en"
-// 5. Stickers
-// "https://api.giphy.com/v1/gifs/search?api_key=ff376887686e4882b799d032421a5391&q=stickers&limit=&offset=0&rating=G&lang=en"
 $("#gifsView").hide();
 $("#showCategry").hide();
 
