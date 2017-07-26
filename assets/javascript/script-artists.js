@@ -51,15 +51,14 @@ $("#addShow").on("click", function(){
 	makeButtons();
 	// this line is so users can hit "enter" instead of clicking the submit button
 	return false; 
-})
+});
 
 // function to display gifs
 function displayGifs(){
-	$("#gifsView").empty();
 	var show = $(this).attr("data-name");
 
 
-	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + show + "&limit=15&api_key=64cb80d8a96642b6978b6f8cfedb29ba";
+	var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=f8dc8a26189348a1a67974542ae3d7a2&q=" + artists + "&limit=&offset=0&rating=G&lang=en";
 
 		// creates ajax call
 		$.ajax({url: queryURL, method: "GET"}).done(function (response) {
@@ -92,8 +91,6 @@ function displayGifs(){
 // function for animating gifs
 $(document).on('click', '.gif', function(){
 	var state = $(this).attr('data-state');
-	console.log(this);
-	console.log(state);
 		if ( state == 'still'){
                 $(this).attr('src', $(this).data('animate'));
                 $(this).attr('data-state', 'animate');

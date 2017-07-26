@@ -55,7 +55,6 @@ $("#addShow").on("click", function(){
 
 // function to display gifs
 function displayGifs(){
-	$("#gifsView").empty();
 	var show = $(this).attr("data-name");
 
 
@@ -92,8 +91,6 @@ function displayGifs(){
 // function for animating gifs
 $(document).on('click', '.gif', function(){
 	var state = $(this).attr('data-state');
-	console.log(this);
-	console.log(state);
 		if ( state == 'still'){
                 $(this).attr('src', $(this).data('animate'));
                 $(this).attr('data-state', 'animate');
