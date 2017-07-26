@@ -13,18 +13,7 @@ $(document).ready(function(){
 
 var shows = ["Saved by the Bell", "Boy Meets World", "Buffy the Vampire Slayer", "Full House", "Twin Peaks", "The X-Files", "Clarissa Explains It All", "Seinfeld", "Rocko's Modern Life", "Are You Afraid of the Dark", "Home Improvement", "Doug", "My So-Called Life", "Family Matters", "Daria"];
 
-
-// queryURLs for 1. Reactions
-// "https://api.giphy.com/v1/gifs/search?api_key=e048b303ed67412aa25bad4f4e52d48a&q=reactions&limit=&offset=0&rating=PG-13&lang=en"
-//2.Entertainment
-// "https://api.giphy.com/v1/gifs/search?api_key=d586148f66214e159b76f0a292b21b99&q=Entertainment&limit=&offset=0&rating=G&lang=en"
-// 3. Sports
-// "https://api.giphy.com/v1/gifs/search?api_key=ff376887686e4882b799d032421a5391&q=sports&limit=&offset=0&rating=G&lang=en"
-// 4. Artists
-// "https://api.giphy.com/v1/gifs/search?api_key=f8dc8a26189348a1a67974542ae3d7a2&q=artists&limit=&offset=0&rating=G&lang=en"
-// 5. Stickers
-// "https://api.giphy.com/v1/gifs/search?api_key=ff376887686e4882b799d032421a5391&q=stickers&limit=&offset=0&rating=G&lang=en"
-
+$("#gifsView").hide();
 // creates buttons for each of these
 function makeButtons(){ 
 	// deletes the shows prior to adding new shows so there are no repeat buttons
@@ -32,7 +21,7 @@ function makeButtons(){
 	// loops through the shows array
 	for (var i = 0; i < shows.length; i++){
 		// dynamically makes buttons for every show in the array
-		var a = $('<button>') 
+		var a = $('<button class="btn btn-info">') 
 		a.addClass('show'); // add a class
 		a.attr('data-name', shows[i]); // add a data-attribute
 		a.text(shows[i]); // make button text
@@ -55,6 +44,8 @@ $("#addShow").on("click", function(){
 
 // function to display gifs
 function displayGifs(){
+	$("#gifsView").empty();
+	$("#gifsView").show();
 	var show = $(this).attr("data-name");
 
 

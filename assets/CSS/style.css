@@ -3,10 +3,6 @@
 /* Author - Ashwini                                   */
 /*----------------------------------------------------*/
 
-#background{
-	/*background-image: url(../images/Bg-1.jpg);*/
-  background-color: black;
-}
 
 .nav-item{
 	visibility: hidden;
@@ -17,10 +13,16 @@
 .nav-link{
 	visibility: visible;
 	float: left;
+  font-size: 20px;
+  color: black;
 	padding-left: 30px;
 	padding-top: 10px;
 	padding-bottom: 0px;
 	margin-bottom: 0px;
+}
+
+.nav-link::after{
+  color: blue;
 }
 
 #item1{
@@ -50,41 +52,79 @@
 
 
 .navbar-collapse {
-    padding-top:50px; 
+    padding-top:30px; 
     padding-right: 50px;
     padding-left: 15px;
 }
 
  .navbar-default {
-  /*background: url("../images/header.jpg");*/
-  /*background-color: black;*/
-  height: 100px;
+  /*background: url("../images/Bg-1.png");*/
+  background-color: #ba9077;
+  height: 80px;
   border-left: hidden;
   border-right: hidden;
   border-bottom-width: 3px;
 }
 .navbar-default .navbar-brand {
-    /*color: black;*/
+    color: black;
 }
 
 .navbar-brand{
   position: absolute;
-  top: 50px;
+  top: 20px;
   padding: 23px;
   padding: 20px;
   margin-left: 20px;
-  background: #4aaaa5;
   text-align: center;
   font-family: 'Georgia', 'Times', 'Times New Roman', 'serif';
-  /*color:#ffffff;*/
-  font-size: 18px;
+  color:black;
+  font-size: 35px;
   font-weight: bold;
   width: 200px;
   height: 20px;
   float: left;
+  animation: rubberBand 30s infinite;
+  animation-duration: 4s;
+  animation-delay: 2s;
   
 }
+/*---------------------------------------*/
+/* LOGO ANIMATION */
+/*---------------------------------------*/
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
 
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.rubberBand {
+  animation-name: rubberBand;
+}
+/*---------------------------------------*/
 .form-group {
   float: left;
   margin-left: 30px;
@@ -92,16 +132,6 @@
   width: 95%;
   font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
   color: #777777;
-}
-
-.btn{
-  margin-left: 30px;
-}
-
-.btn-success{
-  background-color: #4aaaa5;
-  border-color: #dddddd;
-  margin-bottom: 30px;
 }
 
 .nav {
@@ -141,8 +171,8 @@ html {
 }
 
 body{
-    background: url("../images/Bg-1.png");
-    /*background-color: black;*/
+    background: url("../images/Bg2.png");
+    /*background-color: white;*/
     margin: 0 0 64px;     /* bottom = footer height */
 }
 
@@ -193,6 +223,8 @@ img.profile-pic{
 
 #show-input{
   color: black;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 #show-form{
@@ -200,26 +232,48 @@ img.profile-pic{
   margin-bottom: 20px;
   border-style: solid;
   border-color: white;
-  border-width: 2px;  
+  border-width: 1px;  
   color: white;
+}
+
+.btn-success{
+  background-color: transparent;
+}
+
+.material-icons{
+  color: white;
+  float:left;
+}
+
+#play{
+  margin-left: 450px;
+  padding-right: a0px;
+}
+#play::hover{
+  cursor: pointer;
+}
+#play::after{
+  color:green;
+}
+
+#pause::after{
+  color:red;
 }
 
 #gifsView{
   padding: 10px;
   padding-left: 50px;
   border-style: solid;
-  border-color: red;
-  border-width: 2px; 
+  border-color: white;
+  border-width: 1px; 
   overflow: auto; 
 }
 
-.gif{
+.gifs{
   border-style: solid;
-  border-width: 12px;
+  border-width: 10px;
   border-color: black;
   float: left;
-
-
 }
 
 #buttonsView{
@@ -228,7 +282,11 @@ img.profile-pic{
   overflow: auto;
   border-style: solid;
   border-color: white;
-  border-width: 2px;  
+  border-width: 1px;  
+}
+
+.btn-info{
+  background-color: transparent;
 }
 
 

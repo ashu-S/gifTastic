@@ -25,6 +25,8 @@ var shows = ["Saved by the Bell", "Boy Meets World", "Buffy the Vampire Slayer",
 // 5. Stickers
 // "https://api.giphy.com/v1/gifs/search?api_key=ff376887686e4882b799d032421a5391&q=stickers&limit=&offset=0&rating=G&lang=en"
 
+$("#gifsView").hide();
+
 // creates buttons for each of these
 function makeButtons(){ 
 	// deletes the shows prior to adding new shows so there are no repeat buttons
@@ -32,7 +34,7 @@ function makeButtons(){
 	// loops through the shows array
 	for (var i = 0; i < shows.length; i++){
 		// dynamically makes buttons for every show in the array
-		var a = $('<button>') 
+		var a = $('<button class="btn btn-info">') 
 		a.addClass('show'); // add a class
 		a.attr('data-name', shows[i]); // add a data-attribute
 		a.text(shows[i]); // make button text
@@ -55,6 +57,8 @@ $("#addShow").on("click", function(){
 
 // function to display gifs
 function displayGifs(){
+	$("#gifsView").empty();
+	$("#gifsView").show();
 	var show = $(this).attr("data-name");
 
 
