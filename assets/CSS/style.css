@@ -26,7 +26,7 @@
 }
 
 #item1{
-  margin-left: 150px;
+  margin-left: 200px;
 
 }
 
@@ -64,6 +64,7 @@
   border-left: hidden;
   border-right: hidden;
   border-bottom-width: 3px;
+  border-bottom-color: black;
 }
 .navbar-default .navbar-brand {
     color: black;
@@ -227,49 +228,43 @@ img.profile-pic{
   margin-right: 10px;
 }
 
+
 #show-form{
+
   padding: 10px;
+  padding-left: 140px;
   margin-bottom: 20px;
   border-style: solid;
-  border-color: white;
+  border-color: black;
   border-width: 1px;  
   color: white;
 }
 
 .btn-success{
+  background-color: #ba9077;
   background-color: transparent;
 }
 
-.material-icons{
-  color: white;
-  float:left;
-}
 
-#play{
+#showCategory{
   margin-left: 450px;
-  padding-right: a0px;
-}
-#play::hover{
-  cursor: pointer;
-}
-#play::after{
-  color:green;
-}
-
-#pause::after{
-  color:red;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
 }
 
 #gifsView{
-  padding: 10px;
-  padding-left: 50px;
+  padding: 20px;
+  padding-left: 100px;
   border-style: solid;
-  border-color: white;
+  border-color: black;
   border-width: 1px; 
   overflow: auto; 
 }
 
 .gifs{
+  margin-right: 20px;
+  margin-bottom: 20px;
   border-style: solid;
   border-width: 10px;
   border-color: black;
@@ -281,7 +276,7 @@ img.profile-pic{
   padding-left: 50px;
   overflow: auto;
   border-style: solid;
-  border-color: white;
+  border-color: black;
   border-width: 1px;  
 }
 

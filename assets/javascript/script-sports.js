@@ -11,7 +11,7 @@ $(document).ready(function(){
 // create an array of shows - in this case, awesome 90's tv shows
 
 
-var shows = ["Saved by the Bell", "Boy Meets World", "Buffy the Vampire Slayer", "Full House", "Twin Peaks", "The X-Files", "Clarissa Explains It All", "Seinfeld", "Rocko's Modern Life", "Are You Afraid of the Dark", "Home Improvement", "Doug", "My So-Called Life", "Family Matters", "Daria"];
+var sports = ["Baseball", "Soccer", "Tennis", "Ice Skating", "Cricket", "Table Tennis", "Snooker", "Hockey"];
 
 
 // queryURLs for 1. Reactions
@@ -32,12 +32,12 @@ function makeButtons(){
 	// deletes the shows prior to adding new shows so there are no repeat buttons
 	$('#buttonsView').empty();
 	// loops through the shows array
-	for (var i = 0; i < shows.length; i++){
+	for (var i = 0; i < sports.length; i++){
 		// dynamically makes buttons for every show in the array
 		var a = $('<button class="btn btn-info">') 
 		a.addClass('show'); // add a class
-		a.attr('data-name', shows[i]); // add a data-attribute
-		a.text(shows[i]); // make button text
+		a.attr('data-name', sports[i]); // add a data-attribute
+		a.text(sports[i]); // make button text
 		$('#buttonsView').append(a); // append the button to buttonsView div
 	}
 }
@@ -46,9 +46,9 @@ function makeButtons(){
 $("#addShow").on("click", function(){
 
 	// grabs the user show input
-	var show = $("#show-input").val().trim();
+	var sport = $("#show-input").val().trim();
 	// that input is now added to the array
-	shows.push(show);
+	sports.push(sport);
 	// the makeButtons function is called, which makes buttons for all my shows plus the user show
 	makeButtons();
 	// this line is so users can hit "enter" instead of clicking the submit button
@@ -59,10 +59,11 @@ $("#addShow").on("click", function(){
 function displayGifs(){
 	$("#gifsView").empty();
 	$("#gifsView").show();
-	var show = $(this).attr("data-name");
+	$('#showCategory').html("Sports");
+	var sport = $(this).attr("data-name");
 
 
-	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + show + "&limit=15&api_key=64cb80d8a96642b6978b6f8cfedb29ba";
+	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + sport + "&limit=25&rating=PG&api_key=64cb80d8a96642b6978b6f8cfedb29ba";
 
 		// creates ajax call
 		$.ajax({url: queryURL, method: "GET"}).done(function (response) {

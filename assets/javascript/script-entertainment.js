@@ -11,7 +11,7 @@ $(document).ready(function(){
 // create an array of shows - in this case, awesome 90's tv shows
 
 
-var shows = ["Saved by the Bell", "Boy Meets World", "Buffy the Vampire Slayer", "Full House", "Twin Peaks", "The X-Files", "Clarissa Explains It All", "Seinfeld", "Rocko's Modern Life", "Are You Afraid of the Dark", "Home Improvement", "Doug", "My So-Called Life", "Family Matters", "Daria"];
+var shows = ["Animes", "90's TV shows", "Cartoons", "Disney Movies", "Game Of thrones", "Walking Dead", "Orange is the new black", "Silicon valley"];
 
 $("#gifsView").hide();
 // creates buttons for each of these
@@ -46,10 +46,11 @@ $("#addShow").on("click", function(){
 function displayGifs(){
 	$("#gifsView").empty();
 	$("#gifsView").show();
+	$('#showCategory').html("Entertainment");
 	var show = $(this).attr("data-name");
 
 
-	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + show + "&limit=15&api_key=64cb80d8a96642b6978b6f8cfedb29ba";
+	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + show + "&limit=25&rating=PG&api_key=64cb80d8a96642b6978b6f8cfedb29ba";
 
 		// creates ajax call
 		$.ajax({url: queryURL, method: "GET"}).done(function (response) {
